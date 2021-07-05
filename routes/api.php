@@ -22,5 +22,7 @@ Route::delete('/cartItem/{cartItem}', 'CartController@deleteCartItem')->name('ca
 Route::post('/order', 'OrderController@store')->name('order.store');
 Route::post('/profile/{userId}', 'UserController@store')->name('profile.store');
 Route::post('/address/{userId}', 'AddressController@store')->name('address.store');
+Route::put('/order/{orderNo}', 'AdminOrderController@store')->name('adminorder.store');
+
 
 

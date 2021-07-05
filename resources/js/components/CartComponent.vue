@@ -99,16 +99,18 @@
                 return total;
             },
             checkout() {
-                axios.post('api/order', {})
-                .then(response => {
-                    if (response.status === 200) {
-                        window.location.href = '/postcheckout/' + response.data.order_no;
-                        //console.log(response.data.order_no);
-                    }
-                })
-                .catch(error => {
-                    console.log(error)
-                })
+                if(this.cartItem.length > 0) {
+                    axios.post('api/order', {})
+                    .then(response => {
+                        if (response.status === 200) {
+                            window.location.href = '/postcheckout/' + response.data.order_no;
+                            //console.log(response.data.order_no);
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+                }
             }
         },
     }

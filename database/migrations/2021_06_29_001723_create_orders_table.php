@@ -23,8 +23,8 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('subTotal')->nullable();
             $table->unsignedBigInteger('total')->nullable();
             $table->string('service_status')->nullable();
-            $table->time('start_date')->nullable();
-            $table->time('end_date')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->timestamps();
         });
     }

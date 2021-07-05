@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('concierge.index');
 });
 
-//Route::get('/postcheckout', function () {
-//    return view('concierge.postcheckout');
-//});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -34,4 +30,18 @@ Route::get('send-mail', 'MailController@sendMail')->name('send.mail');
 Route::get('/postcheckout/{orderNumber}', 'OrderController@postcheckout')->name('order.postcheckout');
 Route::get('/profile', 'UserController@index')->name('profile.index');
 Route::get('/address', 'AddressController@index')->name('address.index');
-Route::get('/subscription', 'OrderController@index')->name('order.index')->middleware('auth');;
+Route::get('/subscription', 'OrderController@index')->name('order.index')->middleware('auth');
+
+Route::get('/admin/home', 'Home\EmployeeHomeController@index')->name('admin.home');
+Route::get('/admin_subscription', 'AdminOrderController@index')->name('admin.subscription');
+Route::get('/customer', 'CustomersController@index')->name('admin.customer');
+Route::prefix('employee')
+    ->as('employee.')
+    ->group(function() {
+        Route::namespace('Auth\Login')
+            ->group(function() {
+                Route::get('login', 'EmployeeController@showLoginForm')->name('login');
+                Route::post('login', 'EmployeeController@login')->name('login');
+                Route::post('logout', 'EmployeeController@logout')->name('logout');
+            });
+    });

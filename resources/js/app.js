@@ -33,6 +33,8 @@ Vue.component('cart-component', require('./components/CartComponent').default);
 Vue.component('profile-component', require('./components/ProfileComponent').default);
 Vue.component('address-component', require('./components/AddressComponent').default);
 Vue.component('subscription-component', require('./components/SubscriptionComponent').default);
+Vue.component('admin-subscription-component', require('./components/AdminSubscriptionComponent').default);
+Vue.component('customer-component', require('./components/CustomerComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
