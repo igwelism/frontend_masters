@@ -32,4 +32,10 @@ class CleaningController extends Controller
             return view('concierge.cleaning.index', compact('cleaning', 'cartContents'));
         }
     }
+
+    public function destroy(Cleaning $cleaning)
+    {
+        $cleaning->delete();
+        return redirect('/uploads')->with('success', "cleaning has been deleted");
+    }
 }

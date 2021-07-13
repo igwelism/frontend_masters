@@ -40,7 +40,10 @@
                         <a class="nav-link" href="{{route('admin.customer')}}">Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Upload Services</a>
+                        <a class="nav-link" href="{{route('admin.upload')}}">Upload Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.register')}}">Admin User</a>
                     </li>
                 </ul>
                 <!-- Right Side Of Navbar -->

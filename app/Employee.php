@@ -6,7 +6,7 @@ use Illuminate\Foundation\Auth\User as Model;
 
 class Employee extends Model
 {
-    protected $guarded = ['id'];
+    protected $guarded = [];
 
     protected $hidden = [
         'employee_password', 'remember_token'

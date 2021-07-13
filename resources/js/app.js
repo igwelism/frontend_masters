@@ -35,7 +35,8 @@ Vue.component('address-component', require('./components/AddressComponent').defa
 Vue.component('subscription-component', require('./components/SubscriptionComponent').default);
 Vue.component('admin-subscription-component', require('./components/AdminSubscriptionComponent').default);
 Vue.component('customer-component', require('./components/CustomerComponent').default);
-
+Vue.component('service-component', require('./components/ServicesComponent').default);
+Vue.component('admin-user-component', require('./components/AdminUserComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

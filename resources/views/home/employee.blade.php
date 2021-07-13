@@ -24,14 +24,14 @@
                 <img src="{{ asset('images/cleaning.jpg') }}" class="card-img-top" alt="Home Cleaning">
                 <div class="card-body">
                     <h5 class="card-title"><strong>Upload Services</strong></h5>
-                    <a href="#" class="btn btn-primary">Details</a>
+                    <a href="{{route('admin.upload')}}" class="btn btn-primary">Details</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="{{ asset('images/cleaning.jpg') }}" class="card-img-top" alt="Home Cleaning">
                 <div class="card-body">
                     <h5 class="card-title"><strong>Admin User</strong></h5>
-                    <a href="#" class="btn btn-primary">Details</a>
+                    <a href="{{route('admin.register')}}" class="btn btn-primary">Details</a>
                 </div>
             </div>
         </div>

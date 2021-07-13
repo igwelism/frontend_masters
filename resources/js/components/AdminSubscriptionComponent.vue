@@ -32,7 +32,7 @@
                     </td>
                 </tr>
                 <tr v-if="order.length <= 0">
-                    <td colspan="4" style="text-align: center">No Subscription</td>
+                    <td colspan="7" style="text-align: center">No Subscription</td>
                 </tr>
                 </tbody>
             </table>

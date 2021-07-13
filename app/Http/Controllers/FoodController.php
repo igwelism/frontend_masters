@@ -31,4 +31,10 @@ class FoodController extends Controller
         }
         return view('concierge.food.index', compact('foods', 'cartContents'));
     }
+
+    public function destroy(Food $food)
+    {
+        $food->delete();
+        return redirect('/uploads')->with('success', "Food has been deleted");
+    }
 }

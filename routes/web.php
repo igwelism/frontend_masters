@@ -35,6 +35,9 @@ Route::get('/subscription', 'OrderController@index')->name('order.index')->middl
 Route::get('/admin/home', 'Home\EmployeeHomeController@index')->name('admin.home');
 Route::get('/admin_subscription', 'AdminOrderController@index')->name('admin.subscription');
 Route::get('/customer', 'CustomersController@index')->name('admin.customer');
+Route::get('/uploads', 'AdminOrderController@upload')->name('admin.upload');
+Route::get('/admin_registration', 'AdminOrderController@showRegisterForm')->name('admin.register');
+Route::delete('/admin_delete/{employee}', 'Home\EmployeeHomeController@destroy')->name('employee.destroy');
 Route::prefix('employee')
     ->as('employee.')
     ->group(function() {

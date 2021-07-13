@@ -76,7 +76,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><strong>Food</strong></h5>
                                 <p class="card-text">Your chef-cooked meals, delivered to you. Daily or weekly</p>
-                                <a href="#" class="btn btn-primary">Details</a>
+                                <a href="{{ route('food.index') }}" class="btn btn-primary">Details</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
@@ -84,7 +84,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><strong>Laundry</strong></h5>
                                 <p class="card-text">Your clothes, picked up, laundered and delivered to you in 48 hours or less.</p>
-                                <a href="#" class="btn btn-primary">Details</a>
+                                <a href="{{ route('laundry.index') }}" class="btn btn-primary">Details</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
@@ -92,7 +92,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><strong>Home Cleaning</strong></h5>
                                 <p class="card-text">Professional cleaning at your doorstep. Up to thrice a week</p>
-                                <a href="#" class="btn btn-primary">Details</a>
+                                <a href="{{ route('cleaning.index') }}" class="btn btn-primary">Details</a>
                             </div>
                         </div>
                     </div>

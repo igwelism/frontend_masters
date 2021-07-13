@@ -31,4 +31,10 @@ class LaundryController extends Controller
         }
         return view('concierge.laundry.index', compact('laundries', 'cartContents'));
     }
+
+    public function destroy(Laundry $laundry)
+    {
+        $laundry->delete();
+        return redirect('/uploads')->with('success', "Laundry has been deleted");
+    }
 }

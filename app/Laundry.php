@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Laundry extends Model
 {
-    //
+    protected $guarded = [];
 }

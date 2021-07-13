@@ -23,6 +23,9 @@ Route::post('/order', 'OrderController@store')->name('order.store');
 Route::post('/profile/{userId}', 'UserController@store')->name('profile.store');
 Route::post('/address/{userId}', 'AddressController@store')->name('address.store');
 Route::put('/order/{orderNo}', 'AdminOrderController@store')->name('adminorder.store');
+Route::post('/upload', 'AdminOrderController@saveService')->name('adminorder.upload');
+Route::get('/categories', 'AdminOrderController@getCategories')->name('adminorder.categories');
+Route::post('/admin_create', 'Home\EmployeeHomeController@create')->name('employee.create');
 
 
 
