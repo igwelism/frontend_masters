@@ -32,7 +32,7 @@
             </table>
         </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="table-responsive">
@@ -41,12 +41,20 @@
                                 <tr>
                                     <th scope="col">Service</th>
                                     <th scope="col">Price</th>
+                                    <th scope="col">Items</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                     <tr v-for="(item, index) in activeOrderItem">
                                         <td>{{item.name}}</td>
                                         <td>{{item.price}}</td>
+                                        <td>
+                                            <table>
+                                                <tr v-for="(row, index) in item.order_item_content">
+                                                    <td>{{row.name}}</td>
+                                                </tr>
+                                            </table>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

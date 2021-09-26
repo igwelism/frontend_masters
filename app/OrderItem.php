@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class OrderItem extends Model
 {
     protected $guarded = [];
+    protected $with = ["orderItemContent"];
 
     public function order(): BelongsTo
     {

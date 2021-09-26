@@ -44,9 +44,9 @@
                                 <a class="dropdown-item" href="{{ route('cleaning.index') }}">Cleaning</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Companies <span class="sr-only">(current)</span></a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="#">Companies <span class="sr-only">(current)</span></a>--}}
+{{--                        </li>--}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('cart.index') }}">Cart</a>
                         </li>

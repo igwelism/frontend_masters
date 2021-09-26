@@ -40,7 +40,7 @@ class AdminOrderController extends Controller
      */
     public function index()
     {
-        $order = Order::with('orderItems')->get();
+        $order = Order::with('orderItems')->latest()->get();
         return view('concierge.admin_subscription', compact('order'));
     }
 

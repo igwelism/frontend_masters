@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Laundry</li>
+        </ol>
+    </nav>
     <img src="{{ asset('images/laundry/laundry_page_image.jpg') }}" class="img-fluid" alt="laundry">
     <div class="card text-center">
         <div class="card-header services-background">

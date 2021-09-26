@@ -1,10 +1,18 @@
 <template>
     <div>
-        <div v-if="showMessage" class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Success: </strong> {{ success }}.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+        <div v-if="showMessage">
+            <div v-if="status === 'success'"  class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success: </strong> {{ success }}.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div v-else-if="status === 'error'"  class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error: </strong> {{ error }}.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
         <div class="mt-4 center mb-4" style="width: 50rem;">
             <form>
@@ -46,9 +54,11 @@
                 name: '',
                 email: '',
                 success: '',
+                error: '',
                 password: '',
                 confirmPassword: '',
-                showMessage: false
+                showMessage: false,
+                status:'',
             }
         },
         methods: {
@@ -64,6 +74,7 @@
                 .then(response => {
                     if(response.status === 200) {
                         this.success = "Employee successfully saved"
+                        this.status = "success"
                         this.showMessage = true
                         setTimeout(function(){
                             window.location.href = '/admin_registration';
@@ -71,7 +82,10 @@
                     }
                 })
                 .catch(error => {
-                    console.log(error)
+                    console.log(error.response)
+                    this.error = "Employee wasn't successfully saved"
+                    this.showMessage = true
+                    this.status = "error"
                 })
             },
         },
